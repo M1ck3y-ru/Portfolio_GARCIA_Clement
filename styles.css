@@ -10,7 +10,7 @@ body {
     color: #333;
     background-color: #f9f9f9;
     line-height: 1.6;
-    padding-top: 60px; /* Ajuste cette valeur en fonction de la hauteur de ton header */
+    padding-top: 60px; /* Ajuste cette valeur en fonction de la hauteur du header */
 }
 
 /* Style pour le header */
@@ -29,10 +29,16 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles pour le logo */
+.nav-logo img {
+    height: 40px; /* Ajuste la taille du logo */
+}
+
 /* Styles pour le menu de navigation */
 nav {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .nav-menu {
@@ -63,22 +69,24 @@ nav {
 
 /* Style pour le menu burger */
 .burger-menu {
-    display: none;
+    display: none; /* Caché par défaut sur les grands écrans */
+    cursor: pointer;
 }
 
 .burger-menu div {
     width: 30px;
     height: 3px;
-    background: rgb(255, 255, 255);
+    background: #fff;
     margin: 6px 0;
     transition: 0.3s;
 }
 
-/* Main Content Styles */
+/* Styles pour le contenu principal */
 main {
     margin: 20px;
     padding: 0 10px;
 }
+
 /* Style pour l'élément de menu actif */
 .menu-active a {
     background-color: #555; /* Couleur de fond pour l'élément actif */
@@ -89,6 +97,7 @@ main {
 .menu-active a:hover {
     background-color: #777; /* Couleur de fond au survol pour l'élément actif */
 }
+
 /* Style pour les icônes du menu */
 .menu-icon {
     width: 20px; /* Largeur des icônes */
@@ -96,20 +105,6 @@ main {
     margin-right: 8px; /* Espace entre l'icône et le texte */
     vertical-align: middle; /* Aligne l'icône verticalement avec le texte */
 }
-
-/* Styles pour le menu en mode mobile */
-@media (max-width: 768px) {
-    .nav-menu a {
-        display: flex;
-        align-items: center;
-        gap: 10px; /* Espace entre l'icône et le texte */
-    }
-
-    .menu-icon {
-        width: 16px; /* Réduit la largeur des icônes en mode mobile */
-    }
-}
-
 
 /* Styles pour les articles */
 .articles {
@@ -140,56 +135,6 @@ main {
 }
 
 .article-content h2 {
-    margin-top: 0;
-}
-
-.article-content p {
-    margin: 10px 0;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    color: #006d1fad;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styles pour les articles */
-@media (max-width: 768px) {
-    .article {
-        flex-direction: column;
-    }
-    
-    .article img {
-        width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
-        height: auto; /* Conserve les proportions de l'image */
-    }
-}
-
-
-.article-detail {
-    max-width: 1200px; /* Largeur maximale de la section */
-    margin: 0 auto; /* Centre la section horizontalement */
-    padding: 20px; /* Ajoute de l'espace autour de la section */
-}
-
-.article-detail img {
-    max-width: 100%; /* Ajuste la largeur maximale à 100% du conteneur */
-    height: auto; /* Conserve les proportions de l'image */
-    display: block; /* Supprime l'espace blanc sous les images */
-    margin: 10px 0; /* Ajoute un espace au-dessus et en dessous des images */
-}
-
-.article-content {
-    padding: 20px;
-}
-
-.article-content h1 {
     margin-top: 0;
 }
 
@@ -327,9 +272,58 @@ footer {
     margin: 0 10px; /* Espace entre les icônes */
 }
 
+/* Styles pour les sections de contact */
+.contact-info,
+.map-container {
+    margin-bottom: 30px; /* Assure suffisamment d'espace entre les éléments */
+}
 
-/* Responsive Styles pour le footer */
+/* Responsive Styles pour le menu */
 @media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Caché par défaut sur les petits écrans */
+        position: absolute;
+        top: 60px; /* Ajuster si nécessaire */
+        right: 0;
+        width: 100%;
+        background-color: #006d1fad;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.open {
+        display: flex; /* Affiche le menu lorsque le burger est cliqué */
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: block; /* Affiche le menu burger sur les petits écrans */
+    }
+
+    .burger-menu.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger-menu.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
     .contact-info {
         display: flex;
         flex-direction: column;
@@ -339,9 +333,4 @@ footer {
     .contact-info a {
         margin: 5px 0; /* Ajoute de l'espace entre les icônes de contact */
     }
-}
-.contact-form-container,
-.contact-info,
-.map-container {
-    margin-bottom: 30px; /* Assure suffisamment d'espace entre les éléments */
 }
