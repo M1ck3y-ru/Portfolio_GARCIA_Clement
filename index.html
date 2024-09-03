@@ -17,21 +17,23 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/Logo.png">
 </head>
-<body>
-    <div class="side-image left"></div>
-    <div class="side-image right"></div>
-   
-    <header>
-        <nav>
-            <ul>
-                <li class="hexagon"><a href="about.html">À propos</a></li>
-                <li class="hexagon"><a href="company.html">Entreprise</a></li>
-                <li class="hexagon"><a href="articles.html">Articles</a></li>
-                <li class="hexagon"><a href="my_projects.html">Mes Projets</a></li>
-                <li class="hexagon"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-menu">
+            <li class="menu"><a href="about.html"><img src="images/about-icon.png" alt="À propos" class="menu-icon"> À propos</a></li>
+            <li class="menu"><a href="company.html"><img src="images/company-icon.png" alt="Entreprise" class="menu-icon"> Entreprise</a></li>
+            <li class="menu"><a href="articles.html"><img src="images/articles-icon.png" alt="Articles" class="menu-icon"> Articles</a></li>
+            <li class="menu"><a href="my_projects.html"><img src="images/projects-icon.png" alt="Mes Projets" class="menu-icon"> Mes Projets</a></li>
+            <li class="menu"><a href="SiWhite-Corporation.html"><img src="images/Logo.png" alt="SiWhite-Corporation" class="menu-icon"> SiWhite-Corporation</a></li>
+            <li class="menu"><a href="contact.html"><img src="images/contact-icon.png" alt="Contact" class="menu-icon"> Contact</a></li>
+        </ul>
+    </nav>
+</header>
     
     <main>
         <h1>Bienvenue sur mon portfolio en ligne !</h1>
@@ -39,7 +41,7 @@
     </main>
 
     <footer>
-        <div class="footer-container hexagon">
+        <div class="footer-container">
             <p>&copy; 2024 Clément GARCIA - SiWhite-Corporation</p>
             <div class="contact-info">
                 <a href="tel:+33618215764" class="footer-icon">
@@ -51,6 +53,9 @@
                 <a href="https://www.linkedin.com/in/cl%C3%A9ment-garcia-ab0293208/" target="_blank" class="footer-icon">
                     <img src="./images/linkedin.png" alt="LinkedIn">
                 </a>
+                <a href="https://github.com/M1ck3y-ru" target="_blank" class="footer-icon">
+                    <img src="./images/github.png" alt="Github">
+                </a>
             </div>
             <div class="contact-details">
                 <p>Email: <a href="mailto:clement.garciaspro@gmail.com">clement.garciaspro@gmail.com</a></p>
@@ -58,5 +63,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script JavaScript pour le menu burger -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const currentURL = window.location.pathname.split('/').pop();
+            
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                
+                if (linkHref === currentURL) {
+                    link.parentElement.classList.add('menu-active');
+                }
+            });
+        });
+    </script>    
 </body>
 </html>
