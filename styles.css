@@ -149,11 +149,11 @@ main {
     display: block; /* Supprime l'espace blanc sous l'image */
     margin: 0 auto; /* Centre l'image horizontalement */
 }
-.article-detail {
+/* .article-detail {
     max-width: 800px; /* Limite la largeur maximale du conteneur */
-    margin: 0 auto; /* Centre le conteneur sur la page */
-    padding: 20px; /* Ajoute un peu de padding pour respirer */
-}
+    /* margin: 0 auto; Centre le conteneur sur la page */
+    /* padding: 20px; Ajoute un peu de padding pour respirer */
+/* /* }  */
 
 
 .read-more {
