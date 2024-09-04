@@ -142,6 +142,20 @@ main {
     margin: 10px 0;
 }
 
+/* Style pour les images dans le contenu principal */
+.article-detail img {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de son conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    display: block; /* Supprime l'espace blanc sous l'image */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+.article-detail {
+    max-width: 800px; /* Limite la largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur sur la page */
+    padding: 20px; /* Ajoute un peu de padding pour respirer */
+}
+
+
 .read-more {
     display: inline-block;
     margin-top: 10px;
