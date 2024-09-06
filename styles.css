@@ -15,7 +15,7 @@ body {
 
 /* Style pour le header */
 header {
-    background-color: #002f6dea; /* Couleur de fond du header */
+    background-color: #048ac9de; /* Couleur de fond du header */
     color: #fff;
     position: fixed;
     top: 0;
@@ -95,7 +95,7 @@ main {
 }
 
 .menu-active a:hover {
-    background-color: #777; /* Couleur de fond au survol pour l'élément actif */
+    background-color: #555; /* Couleur de fond au survol pour l'élément actif */
 }
 
 /* Style pour les icônes du menu */
@@ -159,7 +159,7 @@ main {
 .read-more {
     display: inline-block;
     margin-top: 10px;
-    color: #002f6dea;
+    color: #053daeea;
     text-decoration: none;
     font-weight: bold;
 }
@@ -300,7 +300,7 @@ footer {
         top: 60px; /* Ajuster si nécessaire */
         right: 0;
         width: 100%;
-        background-color: #002f6dea;
+        background-color: #053daeea;
         flex-direction: column;
         gap: 0;
         padding: 0;
