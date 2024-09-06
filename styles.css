@@ -15,7 +15,7 @@ body {
 
 /* Style pour le header */
 header {
-    background-color: #006d1fad; /* Couleur de fond du header */
+    background-color: #002f6dea; /* Couleur de fond du header */
     color: #fff;
     position: fixed;
     top: 0;
@@ -159,7 +159,7 @@ main {
 .read-more {
     display: inline-block;
     margin-top: 10px;
-    color: #006d1fad;
+    color: #002f6dea;
     text-decoration: none;
     font-weight: bold;
 }
@@ -202,7 +202,7 @@ main {
 .read-more {
     display: inline-block;
     margin-top: 10px;
-    color: #006d1fad;
+    color: #002f6d;
     text-decoration: none;
     font-weight: bold;
 }
@@ -300,7 +300,7 @@ footer {
         top: 60px; /* Ajuster si nécessaire */
         right: 0;
         width: 100%;
-        background-color: #006d1fad;
+        background-color: #002f6dea;
         flex-direction: column;
         gap: 0;
         padding: 0;
