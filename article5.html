@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titre de l'Article 5</title>
+    <title>Une faille découverte dans Copilot Studio de Microsoft :</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/Logo.png">
 </head>
@@ -29,10 +29,32 @@
 
     <main>
         <article class="article-detail">
-            <h1>Titre de l'Article 5</h1>
-            <img src="images/article2.jpg" alt="Article 5">
+            <h1>Une faille découverte dans Copilot Studio de Microsoft :</h1>
+            <img src="images/microsoft.jpg" alt="Article 5">
             <div class="article-content">
-                <p>Contenu spécifique pour l'article 5.</p>
+                <p> Découverte par des experts de Tenable, cette vulnérabilité est liée à une falsification des requêtes côté serveur (SSRF). 
+                Ce type de faille se produit lorsque l'application web récupère une ressource distante sans valider correctement l'URL fournie par l'utilisateur, permettant à un attaquant de manipuler l'application pour envoyer des requêtes à des destinations inattendues, même si elles sont protégées par des pare-feu ou d'autres contrôles d'accès.</p>
+                <p>La faille, identifiée sous le nom CVE-2024-38206, permet à un attaquant authentifié de contourner les protections SSRF de Copilot Studio pour accéder à des informations sensibles sur le cloud. 
+                Les chercheurs ont démontré qu'il était possible d'accéder à des ressources internes de Microsoft Azure, y compris l'instance Metadata Service (IMDS) et les instances internes de Cosmos DB.
+                Cette vulnérabilité se manifeste lorsqu'une requête HTTP créée via Copilot Studio exploite le contournement de la protection SSRF.</p>
+
+                <p>La nature critique de cette faille réside dans le fait qu'elle affecte un environnement multitenant, où les données et services sont partagés entre plusieurs clients.
+                L'accès non autorisé à ces ressources pourrait potentiellement compromettre des informations sensibles de nombreux clients. 
+                Les experts de Tenable ont noté que bien que l'ampleur exacte de l'impact soit difficile à évaluer, le risque est significativement accru en raison du partage de l'infrastructure entre les locataires du service.</p>
+
+                <p>Microsoft a réagi rapidement en corrigeant la vulnérabilité.
+                La faille a été entièrement atténuée, et aucune action supplémentaire n'est requise de la part des utilisateurs de Copilot Studio.</p>
+
+                <p>Je pense que cette découverte souligne l'importance de la sécurité des applications web, en particulier dans les environnements multitenants.</p>
+                <p>Cette faille dans Copilot Studio met en lumière l'importance cruciale de la sécurité dans le développement d'outils d'IA et d'autres services cloud.
+                Les vulnérabilités SSRF sont particulièrement préoccupantes car elles peuvent permettre à un attaquant de contourner des protections réseau et d'accéder à des données sensibles.
+                Cela souligne le besoin impératif pour les développeurs de mettre en place des validations rigoureuses et des contrôles de sécurité robustes. 
+                Pour les professionnels de la cybersécurité, cette situation rappelle l'importance de tester en profondeur les systèmes pour détecter de telles failles et assurer une réponse rapide et efficace en cas de découverte de vulnérabilités. 
+                La rapidité avec laquelle Microsoft a corrigé la faille est un bon exemple de la façon dont les entreprises doivent gérer les problèmes de sécurité pour minimiser les risques pour leurs clients.</p>
+                
+                <p>Source : <a href="https://www.lemondeinformatique.fr/" target="_blank">Le Monde</a></p>
+                <p><a href="articles.html" class="back">Retour aux Articles</a></p>
+                
             </div>
         </article>
     </main>
